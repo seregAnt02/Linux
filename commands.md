@@ -75,3 +75,18 @@
   * Редактирование списка репозиториев sudo apt edit-sources Открывает файл /etc/apt/sources.list в текстовом редакторе для редактирования,
     после сохранения изменений и закрытия редактора, выполняет проверку файла на предмет ошибок. В случае наличия ошибок, выводит предложение на повторное редактирование файла,
      чтобы исправить ошибки.
+
+  ** Команда:
+      apt	Аналог команды
+      apt-get	Описание
+      apt install	apt-get install	Установить пакет
+      apt remove	apt-get remove	Удалить пакет
+      apt purge	apt-get purge	Удалить пакет и конфигурационные файлы
+      apt autoremove	apt-get autoremove	Удалить неиспользуемые пакеты
+      apt update	apt-get update	Обновить список пакетов
+      apt upgrade	apt-get upgrade	Обновить пакеты
+      apt full-upgrade	apt-get dist-upgrade	Обновить пакеты (удалить и установить новые, если требуется)
+      apt list	Примерный аналог:
+      dpkg-query --list	Список пакетов
+      apt search	apt-cache search	Поиск пакета
+      apt show	apt-cache show	Информация о пакете
