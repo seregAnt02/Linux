@@ -93,5 +93,6 @@
 ## Установка Docker для Kali Linux
   Для начала обновим нашу систему: sudo apt update; sudo apt full-upgrade -y
 
-### # сменить пользователя на root  * su root
+### # сменить пользователя на root  
+  * su root
   
