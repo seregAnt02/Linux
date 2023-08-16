@@ -92,7 +92,11 @@
       * apt show	apt-cache show	Информация о пакете
 ## Установка Docker для Kali Linux
   Для начала обновим нашу систему: sudo apt update; sudo apt full-upgrade -y
-
 ### Сменить пользователя на root  
   * su root
-  
+ ### Посмотреть список интерфейсов в Linux
+   ip link list # сокращённая запись: ip l
+### Адреса для сетевых интерфейсов в Linux
+    ip addres list # сокращённая запись: ip a
+### Список открытых портов в linux
+    ss -ltunp # чтобы увидеть название всех процессов нужно выполнять через sudo
