@@ -47,10 +47,12 @@
   * docker network inspect [имя сети] – посмотреть конфигурацию сети
   * docker rm [имя] – удалить контейнер
   * docker rmi [имя] – удалить image
-## Установка Докера на Кали Линукс
+### Установка Докера на Кали Линукс
   * https://www.kali.org/docs/containers/installing-docker-on-kali/
   1. sudo apt update; sudo apt full-upgrade -y
   2. sudo apt install -y docker.io
   3. sudo systemctl enable docker --now
   4. sudo usermod -aG docker $USER
   5. docker 
+#### Старт образа, контейнер докера:
+*  docker-compose up -d ( внутри папки с контенером, происходит запуск)
