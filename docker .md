@@ -48,6 +48,7 @@ dpkg — это, прежде всего, инструмент для устан
   * docker ps – используется для просмотра активных контейнеров
   * docker run * -v /home/mount/data:/var/lib/mysql/data – примонтировать директорию на хосте в docker; в Docker Compose сначала указывается docker путь, потом хост путь
   * docker network ls – показать сети docker
+  * docker images - список образов в системе.
   * docker network inspect [имя сети] – посмотреть конфигурацию сети
   * docker rm [имя] – удалить контейнер
   * docker rmi [имя] – удалить image
