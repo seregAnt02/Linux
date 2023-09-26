@@ -56,7 +56,7 @@ dpkg — это, прежде всего, инструмент для устан
   * docker run * -v /home/mount/data:/var/lib/mysql/data – примонтировать директорию на хосте в docker; в Docker Compose сначала указывается docker путь, потом хост путь
   * docker network ls – показать сети docker
   * docker images - список образов в системе.
-  * docker start <Image> - запустить один или несколько остановленных контейнеров.
+  * docker start <образ> - запустить один или несколько остановленных контейнеров.
   * docker network inspect [имя сети] – посмотреть конфигурацию сети
   * docker rm [имя] – удалить контейнер
   * docker rmi [имя] – удалить image
