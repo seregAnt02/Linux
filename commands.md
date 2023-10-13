@@ -54,4 +54,5 @@
 ##### Перезагрузка сети в Ubuntu
 *  sudo service networking restart
 *  sudo systemctl restart networking.service
-    
+###### изменить IP-адрес с помощью команды ip в Linux:
+* sudo ip addr add 192.168.0.100 255.255.255.0 dev eth0
