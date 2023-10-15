@@ -7,7 +7,7 @@
 Предварительно вычисляются радужные таблицы, которые затем используются для быстрого нахождения паролей, соответствующих хэшам. 
 
 ##### Для ускорения атаки могут использоваться радужные таблицы.:
-https://spy-soft.net/rainbow-tables-kali-linux-rainbowcrack/
+https://habr.com/ru/articles/461163/
 
 ##### Как расшифровать хеш без долгих вычислений?
 https://spy-soft.net/kak-rasshifrovat-xesh-bez-dolgix-vychislenij/
