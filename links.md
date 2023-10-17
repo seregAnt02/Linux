@@ -23,6 +23,9 @@
  * RIPE (Réseaux IP Européens) – это некоммерческая организация, которая занимается управлением и распределением
     ресурсов IP-адресации и автономных систем в регионе Европы, Ближнего Востока и некоторых частях Африки и Азии.
     На ее сайте https://apps.db.ripe.net/db-web-ui/fulltextsearch можно изучить информацию о связи доменных имен, автоматизированных систем и пр. зарегистрированную о ряде компаний.
-### Команды Nmap
+##### Команды Nmap
  * https://denisnovikov.github.io/blog/stunning-examples-of-nmap-commands/
  * Ссылка на официальную документацию: https://nmap.org/man/ru/
+
+##### СПРАВОЧНИК КОМАНД PUTTY / SSH / UNIX / LINUX:
+* https://vps-server.ru/ssh-commands
