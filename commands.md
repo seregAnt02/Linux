@@ -176,4 +176,6 @@ $ passwd опции пользователь
 * gateway 192.168.56.100
 * netmask 255.255.255.0
 * broadcast 192.168.56.255
-
+###### Сменитт ip Windows:
+* netsh interface ip show address
+* netsh interface ip set address name="Ethernet" static 192.168.56.113 255.255.255.0 192.168.56.1
