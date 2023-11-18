@@ -42,7 +42,7 @@
 ##### Установка Docker для Kali Linux
   * Для начала обновим нашу систему: sudo apt update; sudo apt full-upgrade -y
 ##### Сменить пользователя на root  
-  * su root
+  * sudo su root
 ##### Посмотреть список интерфейсов в Linux
   * ip link list # сокращённая запись: ip l
 ##### Адреса для сетевых интерфейсов в Linux
