@@ -1,0 +1,72 @@
+serega02@serega02-VirtualBox:~/develop/GeekBrains/Containerization/HW-5/mariadb$ cat docker-compose.yaml
+version: '3.9'
+
+services:
+
+  db:
+    image: mariadb:10.10.2
+    environment:
+      MYSQL_ROOT_PASSWORD: 1
+    volumes:
+      - /home/serega02/develop/GeekBrains/Containerization/HW-5/mariadb:/var/lib/mariadb
+    deploy:
+      mode: replicated
+      replicas: 2
+
+  adminer:
+    image: adminer:4.8.1
+    restart: always
+    ports:
+      - 6080:8080
+    volumes:
+      - /home/salerat/dumps:/dumps
+    deploy:
+      mode: replicated
+      replicas: 1
+
+
+
+serega02@serega02-VirtualBox:~/develop/GeekBrains/Containerization/HW-5/mariadb$ sudo docker-compose up -d
+Creating network "mariadb_default" with the default driver
+Pulling db (mariadb:10.10.2)...
+10.10.2: Pulling from library/mariadb
+10ac4908093d: Pull complete
+44779101e748: Pull complete
+a721db3e3f3d: Pull complete
+1850a929b84a: Pull complete
+397a918c7da3: Pull complete
+806be17e856d: Pull complete
+634de6c90876: Pull complete
+cd00854cfb1a: Pull complete
+Digest: sha256:bfc25a68e113de43d0d112f5a7126df8e278579c3224e3923359e1c1d8d5ce6e
+Status: Downloaded newer image for mariadb:10.10.2
+Pulling adminer (adminer:4.8.1)...
+4.8.1: Pulling from library/adminer
+e455cf41eadb: Pull complete
+50af658c9ab4: Pull complete
+8160da1ef8d0: Pull complete
+f54e1b456a91: Pull complete
+ce56aa1add83: Pull complete
+295fc39699fb: Pull complete
+ac6b3fb3f9db: Pull complete
+Digest: sha256:16d5b637e94d2e3206c531d0dc22207467dc1160c071d4d75c64b7ccee08f360
+Status: Downloaded newer image for adminer:4.8.1
+Creating mariadb_db_1      ... done
+Creating mariadb_db_2      ... done
+Creating mariadb_adminer_1 ... done
+
+
+serega02@serega02-VirtualBox:~/develop/GeekBrains/Containerization/HW-5/mariadb$ sudo docker ps
+CONTAINER ID   IMAGE             COMMAND                  CREATED         STATUS         PORTS                                       NAMES
+9a629301885a   mariadb:10.10.2   "docker-entrypoint.s…"   4 minutes ago   Up 3 minutes   3306/tcp                                    mariadb_db_1
+c37f9b92c958   mariadb:10.10.2   "docker-entrypoint.s…"   4 minutes ago   Up 3 minutes   3306/tcp                                    mariadb_db_2
+37728fb73bce   adminer:4.8.1     "entrypoint.sh php -…"   4 minutes ago   Up 3 minutes   0.0.0.0:6080->8080/tcp, :::6080->8080/tcp   mariadb_adminer_1
+
+serega02@serega02-VirtualBox:~/develop/GeekBrains/Containerization/HW-5/mariadb$ sudo docker images
+[sudo] пароль для serega02: 
+REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
+adminer       4.8.1     fd3b195a8d79   8 hours ago     250MB
+ubuntu        23.10     483a94112583   5 weeks ago     71.3MB
+nginx         latest    d453dd892d93   2 months ago    187MB
+hello-world   latest    d2c94e258dcb   8 months ago    13.3kB
+mariadb       10.10.2   039bd724508b   11 months ago   410MB
