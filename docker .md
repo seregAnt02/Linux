@@ -71,6 +71,7 @@ dpkg — это, прежде всего, инструмент для устан
   * -v, --volume - позволяет монтировать папки хоста в контейнер;
   * -w - изменяет рабочую директорию контейнера.
   * docker port [CONTAINER] - увидеть порты с помощью команды.
+  * docker container inspect [контейнер] - просмотр инфрмаций контейнера.
 ### Установка Докера на Кали Линукс
   * https://www.kali.org/docs/containers/installing-docker-on-kali/
   1. sudo apt update; sudo apt full-upgrade -y
